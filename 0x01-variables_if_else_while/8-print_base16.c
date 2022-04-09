@@ -7,14 +7,15 @@
 */
 int main(void)
 {
-char y;
+		char digit;
 
-for (y = '0'; y <= '9'; ++y)
-putchar(digit);
-for (y = 'a'; y <= 'f'; ++y)
-putchar(y);
+		for (digit = '0'; digit <= '9'; digit++)
+		putchar(digit);
 
-putchar('\n');
+		for (digit = 'a'; digit <= 'f'; digit++)
+		putchar(digit);
 
-return (0);
+		putchar('\n');
+
+	return (0);
 }
