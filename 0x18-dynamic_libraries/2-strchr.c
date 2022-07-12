@@ -1,22 +1,19 @@
-#include "main.h"
-#define NULL 0
-
+#include"main.h"
+#include<stddef.h>
 /**
- * _strchr -This Script locate 1st occurrence of char in string and returns pointer there
- * @s: string to search
- * @c: target characer
- * Return: pointer to that character in string
+ * _strchr - is a function that locates a character in a string
+ * @s: is a given string
+ * @c: is a char in string s
+ * Return: a pointer to the occurrence of the character c otherwise NULL
  */
-
 char *_strchr(char *s, char c)
 {
-	int i = 0;
+	while (*s != '0')
+	{
+		if (*s == c)
+			return (s);
+		s++;
+	}
 
-	while (s[i] != '\0' && s[i] != c) /* find match */
-		i++;
-
-	if (s[i] == c) /* if match, assign to address */
-		return (&s[i]);
-	else
-		return (NULL);
+	return (0);
 }
